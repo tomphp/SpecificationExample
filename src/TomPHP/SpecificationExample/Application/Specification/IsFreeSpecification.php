@@ -1,9 +1,9 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Specification;
+namespace TomPHP\SpecificationExample\Application\Specification;
 
 use Assert\Assertion;
-use TomPHP\SpecificationExample\Entity\Video;
+use TomPHP\SpecificationExample\Application\Video;
 
 final class IsFreeSpecification implements Specification
 {

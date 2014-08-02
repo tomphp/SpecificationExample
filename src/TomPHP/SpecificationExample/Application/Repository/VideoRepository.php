@@ -1,9 +1,9 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Repository;
+namespace TomPHP\SpecificationExample\Application\Repository;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Specification\Specification;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Specification\Specification;
 
 interface VideoRepository
 {

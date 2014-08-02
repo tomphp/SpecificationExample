@@ -3,10 +3,10 @@
 namespace TomPHP\SpecificationExample\SQLiteRepository;
 
 use PDO;
-use TomPHP\SpecificationExample\Specification\SpecificationVisitor;
-use TomPHP\SpecificationExample\Specification\AndSpecification;
-use TomPHP\SpecificationExample\Specification\IsFreeSpecification;
-use TomPHP\SpecificationExample\Specification\NewerThanSpecification;
+use TomPHP\SpecificationExample\Application\Specification\AndSpecification;
+use TomPHP\SpecificationExample\Application\Specification\IsFreeSpecification;
+use TomPHP\SpecificationExample\Application\Specification\NewerThanSpecification;
+use TomPHP\SpecificationExample\Application\Specification\SpecificationVisitor;
 
 final class SQLiteSpecificationVisitor implements SpecificationVisitor
 {

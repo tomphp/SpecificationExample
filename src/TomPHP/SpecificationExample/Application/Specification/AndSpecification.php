@@ -1,6 +1,6 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Specification;
+namespace TomPHP\SpecificationExample\Application\Specification;
 
 final class AndSpecification implements Specification
 {

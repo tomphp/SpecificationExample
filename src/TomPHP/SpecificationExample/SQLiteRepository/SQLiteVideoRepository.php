@@ -3,11 +3,11 @@
 namespace TomPHP\SpecificationExample\SQLiteRepository;
 
 use PDO;
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Repository\VideoRepository;
-use TomPHP\SpecificationExample\Specification\Specification;
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Repository\VideoRepository;
+use TomPHP\SpecificationExample\Application\Specification\Specification;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
 
 final class SQLiteVideoRepository implements VideoRepository
 {

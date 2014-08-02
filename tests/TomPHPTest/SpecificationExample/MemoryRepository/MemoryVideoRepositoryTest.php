@@ -2,7 +2,7 @@
 
 namespace TomPHPTest\SpecificationExample\MemoryRepository;
 
-use TomPHPTest\SpecificationExample\Repository\VideoRepositoryTest;
+use TomPHPTest\SpecificationExample\Application\Repository\VideoRepositoryTest;
 use TomPHP\SpecificationExample\MemoryRepository\MemoryVideoRepository;
 
 final class MemoryVideoRepositoryTest extends VideoRepositoryTest

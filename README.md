@@ -28,7 +28,7 @@ There are 2 example repositories provided in the code, `MemoryRepository` and
 referenced from anywhere else.
 
 The best place to start to get an understanding of this code is to check the
-`TomPHPTest\SpecificationExample\Repository\VideoRepositoryTest` test.
+`TomPHPTest\SpecificationExample\Application\Repository\VideoRepositoryTest` test.
 
 Possible Improvements
 ---------------------

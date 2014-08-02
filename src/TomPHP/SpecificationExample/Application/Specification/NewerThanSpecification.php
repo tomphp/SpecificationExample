@@ -1,10 +1,10 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Specification;
+namespace TomPHP\SpecificationExample\Application\Specification;
 
 use Assert\Assertion;
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Value\Date;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Date;
 
 final class NewerThanSpecification implements Specification
 {

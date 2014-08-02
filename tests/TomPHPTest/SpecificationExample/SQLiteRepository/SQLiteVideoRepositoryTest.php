@@ -2,7 +2,7 @@
 
 namespace TomPHPTest\SpecificationExample\SQLiteRepository;
 
-use TomPHPTest\SpecificationExample\Repository\VideoRepositoryTest;
+use TomPHPTest\SpecificationExample\Application\Repository\VideoRepositoryTest;
 use TomPHP\SpecificationExample\SQLiteRepository\SQLiteVideoRepository;
 
 final class SQLiteVideoRepositoryTest extends VideoRepositoryTest

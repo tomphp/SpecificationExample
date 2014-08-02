@@ -1,11 +1,11 @@
 <?php
 
-namespace TomPHPTest\SpecificationExample\Specification;
+namespace TomPHPTest\SpecificationExample\Application\Specification;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Specification\NewerThanSpecification;
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Specification\NewerThanSpecification;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
 
 final class NewerThanSpecificationTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,14 +20,14 @@ final class NewerThanSpecificationTest extends \PHPUnit_Framework_TestCase
     public function test_it_is_a_specification()
     {
         $this->assertInstanceOf(
-            'TomPHP\SpecificationExample\Specification\Specification',
+            'TomPHP\SpecificationExample\Application\Specification\Specification',
             $this->specification
         );
     }
 
     public function test_visitor()
     {
-        $visitor = $this->getMock('TomPHP\SpecificationExample\Specification\SpecificationVisitor');
+        $visitor = $this->getMock('TomPHP\SpecificationExample\Application\Specification\SpecificationVisitor');
 
         $visitor->expects($this->once())
                 ->method('visitNewerThan')

@@ -1,9 +1,9 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Entity;
+namespace TomPHP\SpecificationExample\Application;
 
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
 
 final class Video
 {

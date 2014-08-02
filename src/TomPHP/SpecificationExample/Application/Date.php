@@ -1,6 +1,6 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Value;
+namespace TomPHP\SpecificationExample\Application;
 
 use DateTime;
 

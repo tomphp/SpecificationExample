@@ -1,8 +1,8 @@
 <?php
 
-namespace TomPHP\SpecificationExample\Value;
+namespace TomPHP\SpecificationExample\Application;
 
-use TomPHP\SpecificationExample\Value\Date;
+use TomPHP\SpecificationExample\Application\Date;
 
 final class DateTest extends \PHPUnit_Framework_TestCase
 {

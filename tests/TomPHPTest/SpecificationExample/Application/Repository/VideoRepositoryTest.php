@@ -1,14 +1,14 @@
 <?php
 
-namespace TomPHPTest\SpecificationExample\Repository;
+namespace TomPHPTest\SpecificationExample\Application\Repository;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Specification\AndSpecification;
-use TomPHP\SpecificationExample\Specification\IsFreeSpecification;
-use TomPHP\SpecificationExample\Specification\NewerThanSpecification;
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
-use TomPHP\SpecificationExample\Specification\Specification;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Specification\AndSpecification;
+use TomPHP\SpecificationExample\Application\Specification\IsFreeSpecification;
+use TomPHP\SpecificationExample\Application\Specification\NewerThanSpecification;
+use TomPHP\SpecificationExample\Application\Specification\Specification;
 
 abstract class VideoRepositoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -47,7 +47,7 @@ abstract class VideoRepositoryTest extends \PHPUnit_Framework_TestCase
     public function test_it_is_a_VideoRepository()
     {
         $this->assertInstanceOf(
-            'TomPHP\SpecificationExample\Repository\VideoRepository',
+            'TomPHP\SpecificationExample\Application\Repository\VideoRepository',
             $this->repository
         );
     }

@@ -2,9 +2,9 @@
 
 namespace TomPHP\SpecificationExample\MemoryRepository;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Repository\VideoRepository;
-use TomPHP\SpecificationExample\Specification\Specification;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Repository\VideoRepository;
+use TomPHP\SpecificationExample\Application\Specification\Specification;
 
 final class MemoryVideoRepository implements VideoRepository
 {

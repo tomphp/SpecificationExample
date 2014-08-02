@@ -1,10 +1,10 @@
 <?php
 
-namespace TomPHPTest\SpecificationExample\Entity;
+namespace TomPHPTest\SpecificationExample\Application;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
+use TomPHP\SpecificationExample\Application\Video;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
 
 final class VideoTest extends \PHPUnit_Framework_TestCase
 {

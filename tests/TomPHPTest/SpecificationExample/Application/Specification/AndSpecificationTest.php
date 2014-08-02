@@ -1,12 +1,12 @@
 <?php
 
-namespace TomPHPTest\SpecificationExample\Specification;
+namespace TomPHPTest\SpecificationExample\Application\Specification;
 
-use TomPHP\SpecificationExample\Entity\Video;
-use TomPHP\SpecificationExample\Specification\AndSpecification;
-use TomPHP\SpecificationExample\Specification\Specification;
-use TomPHP\SpecificationExample\Value\Date;
-use TomPHP\SpecificationExample\Value\Price;
+use TomPHP\SpecificationExample\Application\Date;
+use TomPHP\SpecificationExample\Application\Price;
+use TomPHP\SpecificationExample\Application\Specification\AndSpecification;
+use TomPHP\SpecificationExample\Application\Specification\Specification;
+use TomPHP\SpecificationExample\Application\Video;
 
 final class AndSpecificationTest extends \PHPUnit_Framework_TestCase
 {
@@ -24,8 +24,8 @@ final class AndSpecificationTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->specification1 = $this->getMock('TomPHP\SpecificationExample\Specification\Specification');
-        $this->specification2 = $this->getMock('TomPHP\SpecificationExample\Specification\Specification');
+        $this->specification1 = $this->getMock('TomPHP\SpecificationExample\Application\Specification\Specification');
+        $this->specification2 = $this->getMock('TomPHP\SpecificationExample\Application\Specification\Specification');
 
         $this->andSpecification = new AndSpecification($this->specification1, $this->specification2);
 
@@ -35,14 +35,14 @@ final class AndSpecificationTest extends \PHPUnit_Framework_TestCase
     public function test_it_is_a_specification()
     {
         $this->assertInstanceOf(
-            'TomPHP\SpecificationExample\Specification\Specification',
+            'TomPHP\SpecificationExample\Application\Specification\Specification',
             $this->andSpecification
         );
     }
 
     public function test_visitor()
     {
-        $visitor = $this->getMock('TomPHP\SpecificationExample\Specification\SpecificationVisitor');
+        $visitor = $this->getMock('TomPHP\SpecificationExample\Application\Specification\SpecificationVisitor');
 
         $visitor->expects($this->once())
                 ->method('visitAnd')
