@@ -1,0 +1,15 @@
+{
+  "require": {
+    "php": ">=5.5",
+    "beberlei/assert": "@stable"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.1.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "TomPHP\\": "src/",
+      "TomPHPTest\\": "tests/"
+    }
+  }
+}
