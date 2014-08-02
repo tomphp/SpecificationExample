@@ -44,37 +44,34 @@ final class SQLiteVideoRepository implements VideoRepository
 
     public function fetchAll()
     {
-        $result = $this->db->query('SELECT * FROM videos');
-
-        $videos = [];
-        foreach ($result as $row) {
-            $videos[] = $this->createVideo($row);
-        }
-
-        return $videos;
+        return $this->runQuery('SELECT * FROM videos');
     }
 
     public function fetchBySpecifcation(Specification $specification)
     {
         $whereClause = $specification->accept(new SQLiteSpecificationVisitor($this->db));
 
-        $result = $this->db->query('SELECT * FROM videos WHERE ' . $whereClause);
+        return $this->runQuery('SELECT * FROM videos WHERE ' . $whereClause);
+    }
+
+    /**
+     * @param string $sql
+     *
+     * @return Video[]
+     */
+    private function runQuery($sql)
+    {
+        $result = $this->db->query($sql);
 
         $videos = [];
         foreach ($result as $row) {
-            $videos[] = $this->createVideo($row);
+            $videos[] = new Video(
+                $row['title'],
+                Date::fromDate($row['releaseDate']),
+                new Price($row['price'])
+            );
         }
 
         return $videos;
-    }
-
-    /** @return Video */
-    private function createVideo(array $row)
-    {
-        return new Video(
-            $row['title'],
-            Date::fromDate($row['releaseDate']),
-            new Price($row['price'])
-        );
     }
 }
