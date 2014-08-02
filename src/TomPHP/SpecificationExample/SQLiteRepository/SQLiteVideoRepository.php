@@ -44,14 +44,14 @@ final class SQLiteVideoRepository implements VideoRepository
 
     public function fetchAll()
     {
-        return $this->runQuery('SELECT * FROM videos');
+        return $this->runSelectQuery('SELECT * FROM videos');
     }
 
     public function fetchBySpecifcation(Specification $specification)
     {
         $whereClause = $specification->accept(new SQLiteSpecificationVisitor($this->db));
 
-        return $this->runQuery('SELECT * FROM videos WHERE ' . $whereClause);
+        return $this->runSelectQuery('SELECT * FROM videos WHERE ' . $whereClause);
     }
 
     /**
@@ -59,7 +59,7 @@ final class SQLiteVideoRepository implements VideoRepository
      *
      * @return Video[]
      */
-    private function runQuery($sql)
+    private function runSelectQuery($sql)
     {
         $result = $this->db->query($sql);
 
