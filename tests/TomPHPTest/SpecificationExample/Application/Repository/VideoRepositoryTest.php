@@ -40,7 +40,7 @@ abstract class VideoRepositoryTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(
             array_values($videos),
-            array_values($this->repository->fetchBySpecifcation($specification))
+            array_values($this->repository->fetchBySpecification($specification))
         );
     }
 

@@ -47,7 +47,7 @@ final class SQLiteVideoRepository implements VideoRepository
         return $this->runSelectQuery('SELECT * FROM videos');
     }
 
-    public function fetchBySpecifcation(Specification $specification)
+    public function fetchBySpecification(Specification $specification)
     {
         $whereClause = $specification->accept(new SQLiteSpecificationVisitor($this->db));
 

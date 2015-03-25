@@ -13,5 +13,5 @@ interface VideoRepository
     public function fetchAll();
 
     /** @returns Video[] */
-    public function fetchBySpecifcation(Specification $specification);
+    public function fetchBySpecification(Specification $specification);
 }

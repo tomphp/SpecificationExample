@@ -22,7 +22,7 @@ final class MemoryVideoRepository implements VideoRepository
     }
 
     /** @returns Video[] */
-    public function fetchBySpecifcation(Specification $specification)
+    public function fetchBySpecification(Specification $specification)
     {
         return array_filter(
             $this->fetchAll(),
